@@ -100,7 +100,7 @@ Notice that the password was repeated (i.e. in red in the table above).  The way
 
 You will be required to accept the assignment on Github via the link on Blackboard.  Once you have a repository, you will need to use PyCharm to clone the repository.  You will be guided by your recitation instructor on how to carry out this activity.
 
-<div style="color:#ff0000"> <strong>IMPORTANT:</strong>  You are only to modify the <strong>cypher.py</strong> file and nothing else. Modifying other files may result in a broken project folder. </div>
+<span style="color:#ff0000"> <strong>IMPORTANT:</strong>  You are only to modify the <strong>cypher.py</strong> file and nothing else. Modifying other files may result in a broken project folder. </span>
 
 The first function, called <span style="font-family:'courier new',courier;font-weight:bold;">encrypt</span>, takes two arguments, a message and a password, returning the encrypted message using the password.
 The second function, called <span style="font-family:'courier new',courier;font-weight:bold;">decrypt</span>, takes two arguments, a message and a password, returning the decrypted message using the password.  The alphabet that should be used is the one representing all the printable characters, provided in the string module.  These functions should work as follows:
