@@ -72,14 +72,16 @@ Calling the decrypt function on the encrypted message with the same password sho
 ```
 
 ## Implementing the Password
-To use the password to encrypt or decrypt a message, the ordinal value of each character in the password can serve as the shift value.  So, consider defining a simple alphabet as,
+To use the password to encrypt or decrypt a message, 
+the ordinal value of each character in the password can serve as the shift value.  
+So, consider defining a simple alphabet as,
 
 ```
 alphabet='abcd'
-ordinalValue = {'a':0, 'b':1, 'c':2, 'd':3}
+ordinal_value = {'a':0, 'b':1, 'c':2, 'd':3}
 ```
 
-then a password like 'bdac' would shift the first letter in a message by 1 (i.e. ordinalValue['b']==1), and shift the second letter in a message by 3 (i.e. ordinalValue['d']==3), and shift the third letter in a message by 0 (i.e. ordinalValue['a']==0), and so forth.  What must be addressed is how to handle the case where the message is larger than the password.  In that case, once all the characters in the password have been exhausted, then the next character to use in the password should be reset to the first character.  So, using the example alphabet and password above, the encryption would proceed as follows:
+then a password like <strong>'bdac'</strong> would shift the first letter in a message by 1 (i.e. ordinal_value['b']==1), and shift the second letter in a message by 3 (i.e. ordinal_value['d']==3), and shift the third letter in a message by 0 (i.e. ordinal_value['a']==0), and so forth.  What must be addressed is how to handle the case where the message is larger than the password.  In that case, once all the characters in the password have been exhausted, then the next character to use in the password should be reset to the first character.  So, using the example alphabet and password above, the encryption would proceed as follows:
 
 <table>
 <tr>
@@ -92,7 +94,7 @@ then a password like 'bdac' would shift the first letter in a message by 1 (i.e.
 <th>Encrypted Message:</th><td>c</td><td>d</td><td>d</td><td>a</td><td>b</td><td>c</td><td>c</td><td>b</td>
 </tr>
 </table>
-Notice that the password was repeated (i.e. in red in the table above).  The way to implement this is to keep track of the index of the character in the message being encrypted and take the modulo with respect to the length of the password.  This will ensure that the index into the password constitently rotates back to 0.  For example, for the message **'badc<span style="color:red;">a</span>dcd'**, the second **<span style="color:red;">a</span>** in red has the index of 4.  The length of the password **'bdac'** is 4.  Taking 4 % 4 results in 0.  This means that the password character with an index of 0 will be used.
+Notice that the password was repeated (i.e. in red in the table above).  The way to implement this is to keep track of the index of the character in the message being encrypted and take the modulo with respect to the length of the password.  This will ensure that the index into the password consistently rotates back to 0.  For example, for the message <strong>'badc<span style="color:red;">a</span>dcd'</strong>, the second <strong><span style="color:red;">a</span></strong> in red has the index of 4.  The length of the password <strong>'bdac'</strong> is 4.  Taking 4 % 4 results in 0.  This means that the password character with an index of 0 will be used.
 
 # Implementation
 

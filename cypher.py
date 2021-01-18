@@ -6,7 +6,7 @@
 import string
 
 alphabet = string.printable
-lookup = {ch: i for i, ch in enumerate(alphabet)}
+ordinal_value = {ch: i for i, ch in enumerate(alphabet)}
 
 
 def encrypt(message, password):
