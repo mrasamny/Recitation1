@@ -45,9 +45,9 @@ G   K    D   O    B
 ```
 ## Let's Password Protect It!
 
-In this Skill Builder, the encryption and decryption functions implemented in class will be extended to use a password.  The idea is to utilize the same scheme of shifting the alphabet, except the shifting is relative to the ordinal value of each character in the password.  That is each character in the password or more precisely the ordinal value of each character in the password will form the shift key.
+In this Skill Builder, the encryption and decryption functions that were implemented in class will be extended to use a password.  The idea is to utilize the same scheme of shifting the alphabet, except the shifting is relative to the ordinal value of each character in the password.  That is each character in the password or more precisely the ordinal value of each character in the password will form the shift key.
 
-The following Python functions are provided as skeletons in the template code below.
+The following Python functions are provided as skeletons in the cypher.py file.  Instruction on how to obtain this file is provided later in this document.
 
 ```python
 def encrypt(message, password):
@@ -96,11 +96,17 @@ Notice that the password was repeated (i.e. in red in the table above).  The way
 
 # Implementation
 
-The template below (can also be downloaded at <a href="https://cis-cloud.desu.edu/index.php/s/jGTgFuFtTIZWVeh/download">here</a>)contains two skeleton functions.  The first function, called <span style="font-family:'courier new',courier;font-weight:bold;">encrypt</span>, takes two arguments, a message and a password, returning the encrypted message using the password..  The second function, called <span style="font-family:'courier new',courier;font-weight:bold;">decrypt</span>, takes two arguments, a message and a password, returning the decrypted message using the password.  The alphabet that should be used is the one representing all the printable characters, provided in the string module.  These functions should work as follows:
+You will be required to accept the assignment on Github via the link on Blackboard.  Once you have a repository, you will need to use PyCharm to clone the repository.  You will be guided by your recitation instructor on how to carry out this activity.
+
+<div style="color:#ff0000"> <strong>IMPORTANT:</strong>  You are only to modify the <strong>cypher.py</strong> file and nothing else. Modifying other files may result in a broken project folder. </div>
+
+The first function, called <span style="font-family:'courier new',courier;font-weight:bold;">encrypt</span>, takes two arguments, a message and a password, returning the encrypted message using the password.
+The second function, called <span style="font-family:'courier new',courier;font-weight:bold;">decrypt</span>, takes two arguments, a message and a password, returning the decrypted message using the password.  The alphabet that should be used is the one representing all the printable characters, provided in the string module.  These functions should work as follows:
 
 ```python
 >>> encrypt('Shhh.... This is a secret','IamBond!')
 '\x0brDS\x0c\x0b_BC$DTQhv{Ckg$CzE/,'
+
 >>> decrypt(encrypt('Shhh.... This is a secret','IamBond!'),'IamBond!')
 'Shhh.... This is a secret'
 ```
