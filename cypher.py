@@ -11,9 +11,9 @@ ordinal_value = {ch: i for i, ch in enumerate(alphabet)}
 
 def encrypt(message, password):
     encrypted_message = ''
-    pass  # replace this line with your code.
+    pass  # TODO replace this line with your code.
 
 
 def decrypt(message, password):
     decrypted_message = ''
-    pass  # replace this line with your code.
+    pass  # TODO replace this line with your code.
